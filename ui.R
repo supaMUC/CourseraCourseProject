@@ -16,8 +16,16 @@ shinyUI(fluidPage(
                           ,"This little shiny app is making predictions on whether one would have survived 
                           the sinking of the Titanic or not. The predictor used is Naive Bayes and the basis 
                           for the analysis is the R example data set 'Titanic'."
-                          ,"From the sidebar on the left you can choose the various input parameters."
+                          ,h4("How to use this app")
+                          ,p("From the sidebar on the left you can choose the various input parameters.")
+                          ,p("The class represents whether the passenger was hosted in 1st, 2nd or 3rd class or 
+                             whether he was part of the crew.")
+                          ,p("Whenever you change one of the values, a new prediction will be made by the classifier
+                             built during the start-up of the application and the respective text and image corresponding
+                             to the prediction will be shown.")
+                          ,h3("Prediction:")
                           ,h4(tableOutput("text"))
                           ,imageOutput("image"), align = "center")
+                         
   )
 ))
